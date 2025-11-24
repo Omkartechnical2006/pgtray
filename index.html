@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Thank You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* Custom gradient to match the specific yellow glow */
+        .custom-bg {
+            background: radial-gradient(circle at 50% 30%, #fffde7 0%, #fff176 40%, #ffd600 100%);
+        }
+
+        /* Diagonal geometric lines */
+        .diagonal-line {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(-45deg);
+            pointer-events: none;
+        }
+
+        /* Button shadow for depth */
+        .btn-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* CSS Animation for the logo */
+        .logo-animation {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="custom-bg min-h-screen w-full flex flex-col items-center justify-between relative overflow-hidden text-blue-900">
+
+    <!-- Geometric Background Elements -->
+    <!-- Top right line -->
+    <div class="diagonal-line w-96 h-64 top-[-50px] right-[-100px] bg-gradient-to-b from-white/20 to-transparent"></div>
+    <!-- Bottom right distinct lines -->
+    <div class="diagonal-line w-px h-64 bottom-[20%] right-[10%] bg-blue-900/10"></div>
+    <div class="diagonal-line w-px h-48 bottom-[35%] right-[-5%] bg-blue-900/10"></div>
+    <!-- Left side accent -->
+    <div class="diagonal-line w-2 h-20 top-[30%] left-0 bg-blue-600/30"></div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col items-center justify-center w-full px-6 z-10">
+        
+        <!-- Header Text -->
+        <h1 class="text-3xl font-bold text-center mb-12 tracking-tight text-[#003366]">
+            Thank you for participating
+        </h1>
+
+        <!-- Central Animated Logo -->
+        <div class="relative w-64 h-64 mb-8 flex items-center justify-center">
+            <img src="safalta-logo.png" alt="Safalta Logo" class="logo-animation w-full h-auto object-contain" />
+        </div>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="w-full z-10 mb-0">
+        <!-- Logout Button -->
+        <div class="px-4 pb-6 w-full max-w-md mx-auto">
+            <button onclick="handleLogout()" class="w-full bg-[#004d99] hover:bg-[#003366] text-white font-bold text-xl py-4 rounded shadow-lg transition duration-200 active:scale-95 btn-shadow tracking-wide">
+                Logout
+            </button>
+        </div>
+        
+        <!-- Cookie Consent Tab -->
+        <div class="w-full flex justify-end">
+             <div class="bg-white/90 text-xs text-gray-800 px-3 py-1 rounded-tl-lg shadow-sm cursor-pointer hover:bg-white">
+                 Cookie Consent
+             </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogout() {
+            // Simple visual feedback
+            const btn = document.querySelector('button');
+            btn.classList.add('opacity-75');
+            
+            setTimeout(() => {
+                window.location.href="https://pgtry.com/safalta-app/?event=63zmp62";
+               
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
